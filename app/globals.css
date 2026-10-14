@@ -474,3 +474,90 @@
     outline-offset: 2px;
   }
 }
+
+/* ========= LOADING SCREEN ========= */
+
+.loading-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: grid;
+  place-items: center;
+  background: #050505;
+  color: #ff6316;
+}
+
+.loading-content {
+  display: flex;
+  width: min(280px, calc(100vw - 48px));
+  flex-direction: column;
+  align-items: center;
+}
+
+.hexagon-logo {
+  display: block;
+  overflow: visible;
+  margin-bottom: 28px;
+}
+
+.hexagon-base,
+.hexagon-active {
+  fill: none;
+  stroke-width: 2.5;
+  stroke-linejoin: round;
+}
+
+.hexagon-base {
+  stroke: #303030;
+}
+
+.hexagon-active {
+  stroke: #ff6316;
+  stroke-linecap: round;
+  filter: drop-shadow(0 0 4px rgb(255 99 22 / 45%));
+}
+
+/* Lettera G */
+.logo-g {
+  fill: #ff6316;
+  font-family: var(--font-jetbrains-mono), sans-serif;
+  font-size: 61px;
+  font-weight: 800;
+  text-anchor: middle;
+  dominant-baseline: auto;
+}
+
+.loading-label {
+  margin: 0 0 18px;
+  color: #777;
+  font-family: monospace;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+}
+
+.progress-track {
+  width: 100%;
+  height: 3px;
+  overflow: hidden;
+  background: #292929;
+}
+
+.progress-fill {
+  width: 100%;
+  height: 100%;
+  background: #ff6316;
+  transform: scaleX(0);
+  transform-origin: left center;
+}
+
+.progress-info {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 10px;
+  color: #777;
+  font-family: monospace;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+}
+

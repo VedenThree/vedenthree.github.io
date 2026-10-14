@@ -4,6 +4,7 @@ import "./globals.css";
 import NavBar from "@/components/layouts/navbar";
 import BgScene from "@/components/layouts/bg-scene";
 import { cn } from "@/lib/utils";
+import LoadingScreen from "@/components/animations/loadingscreen";
 
 const archivo = Archivo({
   variable: "--font-archivo",
@@ -54,6 +55,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       )}
     >
       <body className="min-h-full flex flex-col">
+        <LoadingScreen/>
         <BgScene />
         <NavBar />
         {/* px di rails e sidebar: `--rail-w` / `--sidebar-w`, stessa fonte della navbar */}

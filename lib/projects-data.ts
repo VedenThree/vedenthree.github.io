@@ -77,7 +77,7 @@ const PUBLISHED: Project[] = [
     title: "SkillSwap",
     desc: "Piattaforma di scambio competenze in corso di completamento.",
     descEn: "Skill exchange platform, currently being completed.",
-    tags: ["React", "Next.js", "TypeScript", "MongoDB"],
+    tags: ["React", "JavaScript", "Rest API"],
     completion: 50,
     placeholder: false,
     visible: true,

@@ -96,7 +96,7 @@ export default function BgScene() {
       <div className="absolute inset-0 bg-[linear-gradient(180deg,var(--bg-deep)_0%,var(--bg)_45%,var(--bg)_100%)]" />
       <div
         ref={auroraRef}
-        className="absolute w-[150%] h-[65%] -top-[15%] -left-[25%] opacity-40 will-change-transform mix-blend-screen blur-[70px] bg-[radial-gradient(ellipse_at_28%_30%,color-mix(in_srgb,var(--ice)_55%,transparent),transparent_60%),radial-gradient(ellipse_at_68%_42%,color-mix(in_srgb,var(--orange)_28%,transparent),transparent_55%),radial-gradient(ellipse_at_48%_62%,color-mix(in_srgb,var(--olive)_40%,transparent),transparent_60%)]"
+        className="absolute w-[150%] h-[65%] top-[-15%] left-[-25%] opacity-40 will-change-transform mix-blend-screen blur-[70px] bg-[radial-gradient(ellipse_at_28%_30%,color-mix(in_srgb,var(--ice)_55%,transparent),transparent_60%),radial-gradient(ellipse_at_68%_42%,color-mix(in_srgb,var(--orange)_28%,transparent),transparent_55%),radial-gradient(ellipse_at_48%_62%,color-mix(in_srgb,var(--olive)_40%,transparent),transparent_60%)]"
       />
       <div id="particles" className="absolute inset-0">
         {STARS.map((s) => (

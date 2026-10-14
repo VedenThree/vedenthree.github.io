@@ -59,10 +59,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <BgScene />
         <NavBar />
         {/* px di rails e sidebar: `--rail-w` / `--sidebar-w`, stessa fonte della navbar */}
-        <div className="w-full pl-[var(--rail-w)] lg:pl-[var(--sidebar-w)]">
+        <div className="w-full pl-(--rail-w) lg:pl-(--sidebar-w)">
           {/* Gutter stretto sotto 640px: a 375px si guadagnano 24px di
               contenuto, e con il rail laterale già presente tanto ce ne vuole. */}
-          <div className="max-w-[1180px] mx-auto px-5 sm:px-8 w-full relative z-[1] flex flex-col flex-1">
+          <div className="max-w-295 mx-auto px-5 sm:px-8 w-full relative z-1 flex flex-col flex-1">
             {children}
           </div>
         </div>

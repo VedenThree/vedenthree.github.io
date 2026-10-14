@@ -439,7 +439,7 @@ export default function Projects({
                     className={cn(
                       "group relative flex h-full w-full flex-col border p-5 font-mono transition-colors duration-300",
                       "hover:border-orange/40",
-                      "rounded-[2px]",
+                      "rounded-xs",
                       selected === p.id
                         ? "border-orange/70 bg-orange/5"
                         : "border-panel-rule",
@@ -471,7 +471,7 @@ export default function Projects({
                       aria-pressed={selected === p.id}
                       aria-label={`${dict.openProject} ${p.title}`}
                       onClick={() => handleSelect(p)}
-                      className="flex w-full flex-1 cursor-pointer select-none flex-col text-left active:translate-y-[1px] focus-visible:outline focus-visible:outline-2 focus-visible:outline-orange focus-visible:outline-offset-2"
+                      className="flex w-full flex-1 cursor-pointer select-none flex-col text-left active:translate-y-px focus-visible:outline focus-visible:outline-orange focus-visible:outline-offset-2"
                     >
                       {/* Header row */}
                       <div className="flex items-baseline gap-2 border-b border-panel-rule pb-3 mb-3">
@@ -532,7 +532,7 @@ export default function Projects({
                             target="_blank"
                             rel="noreferrer"
                             aria-label={`${dict.githubAria} ${p.title} ${dict.newTab}`}
-                            className="font-bold tracking-[0.1em] text-orange hover:underline"
+                            className="font-bold tracking-widest text-orange hover:underline"
                           >
                             GITHUB ↗
                           </a>
@@ -543,7 +543,7 @@ export default function Projects({
                             target="_blank"
                             rel="noreferrer"
                             aria-label={`${dict.liveAria} ${p.title} ${dict.newTab}`}
-                            className="font-bold tracking-[0.1em] text-orange hover:underline"
+                            className="font-bold tracking-widest text-orange hover:underline"
                           >
                             LIVE ↗
                           </a>
@@ -551,7 +551,7 @@ export default function Projects({
                         {!p.githubUrl && !p.liveUrl && (
                           <span
                             className={cn(
-                              "font-bold tracking-[0.1em] transition-colors duration-300",
+                              "font-bold tracking-widest transition-colors duration-300",
                               selected === p.id
                                 ? "text-green"
                                 : "text-orange group-hover:underline",

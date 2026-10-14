@@ -109,7 +109,7 @@ const Terminal = forwardRef<TerminalHandle, TerminalProps>(function Terminal(
               />
             ))}
           </div>
-          <p className="font-mono text-[11px] text-ink-title ml-2 whitespace-nowrap overflow-hidden text-ellipsis tracking-[0.1em] sm:tracking-[0.14em]">
+          <p className="font-mono text-[11px] text-ink-title ml-2 whitespace-nowrap overflow-hidden text-ellipsis tracking-widest sm:tracking-[0.14em]">
             {title}
           </p>
         </div>
@@ -157,7 +157,7 @@ const Terminal = forwardRef<TerminalHandle, TerminalProps>(function Terminal(
                   lunghe venivano amputate dal bordo del terminale. */}
               <span
                 className={cn(
-                  "font-mono text-[11px] sm:text-[13px] flex-1 overflow-hidden whitespace-pre-wrap break-words sm:whitespace-pre sm:break-normal",
+                  "font-mono text-[11px] sm:text-[13px] flex-1 overflow-hidden whitespace-pre-wrap wrap-break-word sm:whitespace-pre sm:break-normal",
                   line.ready
                     ? "text-orange font-bold"
                     : line.module

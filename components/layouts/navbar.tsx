@@ -76,7 +76,7 @@ function MobileRail({
   locale: Locale;
 }) {
   return (
-    <aside className="fixed left-0 top-0 z-50 flex h-screen w-[var(--rail-w)] flex-col items-center border-r border-line bg-ink-deep/90 py-5 lg:hidden">
+    <aside className="fixed left-0 top-0 z-50 flex h-screen w-(--rail-w) flex-col items-center border-r border-line bg-ink-deep/90 py-5 lg:hidden">
       {/* Marchio: torna alla sezione attiva, non a una destinazione diversa.
           44px anche qui: sotto i 44 non è un tap target, è un'inezia. */}
       <button
@@ -112,7 +112,7 @@ function MobileRail({
                 {num}
               </span>
               <span
-                className={`inline-block size-[3px] rotate-45 rounded-[1px] transition-colors ${
+                className={`inline-block size-0.75 rotate-45 rounded-[1px] transition-colors ${
                   isActive ? "bg-orange" : "bg-ice/25"
                 }`}
               />
@@ -125,7 +125,7 @@ function MobileRail({
       <LangSwitch locale={locale} orientation="col" className="mb-4 w-full" />
 
       <div
-        className="size-[6px] shrink-0 rounded-full bg-green animate-pulse-glow"
+        className="size-1.5 shrink-0 rounded-full bg-green animate-pulse-glow"
         title="Online"
       />
     </aside>
@@ -181,7 +181,7 @@ export default function NavBar() {
     <>
       {/* nav-sidebar: su viewport bassi le 4 righe fisse da --nav-row-h non
             entrano, in quel caso il nav scorre (regola in globals.css) */}
-        <aside className="nav-sidebar fixed left-0 top-0 z-50 hidden h-screen w-[var(--sidebar-w)] flex-col bg-ink-deep/90 backdrop-blur-[12px] lg:flex">
+        <aside className="nav-sidebar fixed left-0 top-0 z-50 hidden h-screen w-(--sidebar-w) flex-col bg-ink-deep/90 backdrop-blur-md lg:flex">
         <div className="border-b border-line px-5 pb-5 pt-6">
           <div className="mb-4 flex items-center gap-3">
             <div className="flex size-9 shrink-0 items-center justify-center border border-line bg-panel-core">
@@ -222,7 +222,7 @@ export default function NavBar() {
           <span
             ref={indicatorRef}
             aria-hidden
-            className="nav-indicator absolute left-0 top-0 h-[var(--nav-row-h)] w-[2px] bg-orange"
+            className="nav-indicator absolute left-0 top-0 h-(--nav-row-h) w-0.5 bg-orange"
             style={{ "--nav-index": activeIndex } as CSSProperties}
           />
           {NAV_ITEMS.map(({ num, id }) => {
@@ -231,7 +231,7 @@ export default function NavBar() {
               <button
                 key={id}
                 onClick={() => goTo(id)}
-                className={`group flex h-[var(--nav-row-h)] cursor-pointer items-center border-b border-ice/5 px-5 text-left transition-colors ${
+                className={`group flex h-(--nav-row-h) cursor-pointer items-center border-b border-ice/5 px-5 text-left transition-colors ${
                   isActive ? "bg-orange/5" : "hover:bg-ice/5"
                 }`}
               >
@@ -274,7 +274,7 @@ export default function NavBar() {
             <span className="text-paper/70">REACT·NEXT·NODE·SQL</span>
           </div>
           <div className="flex items-center gap-1.5">
-            <span className="size-[6px] rounded-full bg-green animate-pulse-glow" />
+            <span className="size-1.5 rounded-full bg-green animate-pulse-glow" />
             <span className="font-mono text-[8px] tracking-[0.88px] text-green">
               ONLINE
             </span>

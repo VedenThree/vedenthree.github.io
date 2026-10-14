@@ -60,13 +60,13 @@ export default function SkillBar({
 
   return (
     <div
-      className="h-[6px] w-full bg-bg-deep/80 border border-line/40 rounded"
+      className="h-1.5 w-full bg-bg-deep/80 border border-line/40 rounded"
       role="img"
       aria-label={label}
     >
       <div
         ref={ref}
-        className="h-full bg-gradient-to-r from-orange/50 to-orange rounded"
+        className="h-full bg-linear-to-r from-orange/50 to-orange rounded"
         style={{ width: `${level * 20}%` }}
       />
     </div>

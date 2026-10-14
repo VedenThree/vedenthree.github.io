@@ -12,7 +12,7 @@ import { DICTS } from "@/lib/i18n";
 export const metadata: Metadata = {
   title: "SYS / 01 — Junior Web & Mobile App Developer",
   description:
-    "Portfolio di uno Junior Web & Mobile App Developer con focus sul frontend moderno: React, Next.js, TypeScript, Tailwind CSS e capacità di trasformare design Figma in interfacce web funzionanti.",
+    "Portfolio di un Junior Web & Mobile Developer, specializzato in React, Next.js, TypeScript e interfacce responsive.",
   // Sito non indicizzato per scelta: blocca anche mirror/deploys di anteprima.
   robots: { index: false, follow: false },
 };

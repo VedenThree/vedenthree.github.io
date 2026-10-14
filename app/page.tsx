@@ -10,7 +10,7 @@ import { DICTS } from "@/lib/i18n";
 // Versione italiana (default): i metadata vivono qui e non più nel layout,
 // così `/en` può avere i suoi senza conflitti.
 export const metadata: Metadata = {
-  title: "SYS / 01 — Junior Web & Mobile App Developer",
+  title: "SYS / 01 — Web & Mobile Developer",
   description:
     "Portfolio di un Junior Web & Mobile Developer, specializzato in React, Next.js, TypeScript e interfacce responsive.",
   // Sito non indicizzato per scelta: blocca anche mirror/deploys di anteprima.
